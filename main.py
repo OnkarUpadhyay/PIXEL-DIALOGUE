@@ -18,17 +18,17 @@ load_dotenv()
 _TMP_DIR = ".tmp"
 _GEN_DIR = ".gen"
 
-def _ensure_workspace():  # NEW
+def _ensure_workspace():  
     os.makedirs(_TMP_DIR, exist_ok=True)
     os.makedirs(_GEN_DIR, exist_ok=True)
 
-_ensure_workspace()  # NEW
+_ensure_workspace()
 
 
 # One-time init
 if "uploader_token" not in st.session_state:
     st.session_state.uploader_token = 0
-########################################
+
 
 # -------- Reset function to clear generated files, temporary files and session state ---------
 
@@ -45,13 +45,10 @@ def reset_app():
     _ensure_workspace()
 
     # 3) Clear widget/session state so uploader & app don’t respawn files
-    #st.session_state.pop("uploaded_img", None)   # critical: clears file_uploader buffer
     st.session_state.pop("temp_path", None)
     st.session_state.uploader_token += 1
     #st.session_state.pop("model_provider", None)  # reset model choice 
 
-    # 4) Rerun
-    #st.rerun()
 
 # --- Tools List ---
 

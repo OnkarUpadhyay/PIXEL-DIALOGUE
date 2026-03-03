@@ -1,4 +1,3 @@
-
 <!-- Banner -->
 <p align="center">
   <img src="assets/pixel-dialogue-banner.svg" alt="Pixel Dialogue Banner" width="100%" />
@@ -129,3 +128,4 @@ MIT — see [LICENSE](LICENSE).
 <p align="center">
   <img src="assets/pixel-dialogue-logo.svg" alt="Pixel Dialogue logo" width="56%" />
 </p>
+
