@@ -20,7 +20,6 @@
 
 <p align="center">
   <img src="assets/demo.gif" alt="Pixel Dialogue demo (placeholder)" width="90%">
-  <br><sub><em>Above is a placeholder. Record your app and replace <code>assets/demo.gif</code> with a real capture — see instructions below.</em></sub>
 </p>
 
 ## 🚀 Features
