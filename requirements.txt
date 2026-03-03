@@ -1,0 +1,15 @@
+langchain
+langgraph
+langchain_community
+langchain_openai
+langchain_groq
+python-dotenv
+langchain-google-genai
+transformers
+langchain_tavily
+torch
+ultralytics
+diffusers
+accelerate
+pytesseract
+streamlit
