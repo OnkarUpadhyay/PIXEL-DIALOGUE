@@ -50,7 +50,7 @@ def reset_app():
     #st.session_state.pop("model_provider", None)  # reset model choice 
 
 
-# --- Tools List ---
+# ----------------- Tools List -----------------
 
 tools = [image_caption_tool, object_detection_tool, image_generation_tool, extract_text_tool, tavily_search]
 
