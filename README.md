@@ -1,7 +1,15 @@
 <!-- Banner -->
 <p align="center">
-  <img src="assets/pixel-dialogue-banner.svg" alt="Pixel Dialogue Banner" width="100%" />
+  <img src="assets/pixel-dialogue-banner.png" alt="Pixel Dialogue Banner" width="100%" />
 </p>
+
+<h1 align="center">
+  <img
+    src="https://readme-typing-svg.herokuapp.com?size=26&duration=2500&pause=700&color=FF3AA3&center=true&vCenter=true&width=600&lines=🌟+Pixel+Dialogur;Hello+traveler!;You’ve+entered+the+world+of+Pixel+Dialogur;A+chatbot+that+blends+agentic+intelligence;With+pixel‑perfect+charm;✨+Explore+the+code;✨+Share+your+thoughts;✨+Help+shape+the+dialogue"
+    alt="Animated Pixel Dialogur welcome"
+  />
+</h1>
+
 
 <h1 align="center">✨ Pixel Dialogue</h1>
 <p align="center"><em>Chat with your images — Caption • Detect • OCR • Generate</em></p>
@@ -10,23 +18,36 @@
   <!-- Badges -->
   <a href="https://www.python.org/"><img alt="Python" src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white"></a>
   <a href="https://streamlit.io/"><img alt="Streamlit" src="https://img.shields.io/badge/Streamlit-1.32%2B-FF4B4B?logo=streamlit&logoColor=white"></a>
-  <a href="https://github.com/Onkar-Upadhyay/Pixel_Dialogue/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/License-MIT-2ea44f.svg"></a>
+  <a href="https://python.langchain.com/"><img alt="LangChain" src="https://img.shields.io/badge/LangChain-Tools-blueviolet"></a>
   <img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg">
-  <img alt="Made with Love" src="https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F-purple">
+  <img alt="Built with Love" src="https://img.shields.io/badge/Built%20with-%F0%9F%92%9C-purple">
 </p>
 
 ---
 
 <p align="center">
-  <img src="assets/demo.gif" alt="Pixel Dialogue demo (placeholder)" width="90%">
+  <img src="assets/demo.gif" alt="Pixel Dialogue demo" width="80%">
 </p>
+
+## 🧠 What is Pixel Dialogue?
+**Pixel Dialogue** is your images' conversational companion. Upload a picture and ask anything:
+- “What’s in this image?”
+- “List objects with bounding boxes and confidence.”
+- “Extract the text in this poster.”
+- “Generate a futuristic version of this scene.”
+
+Under the hood, a LangChain agent chooses the right tool (BLIP, YOLO, EasyOCR, Stable Diffusion) and an LLM to deliver fast, grounded answers.
+
+---
+
 
 ## 🚀 Features
 - 🖼️ **Image Captioning** — BLIP generates rich descriptions.
 - 🔍 **Object Detection** — YOLO finds objects + bounding boxes + confidence.
 - 🧾 **Text Extraction (OCR)** — EasyOCR pulls text from images.
 - 🎨 **AI Image Generation** — Stable Diffusion v1.5 renders from prompts.
-- 🧠 **Conversational Agent** — LangChain + LLMs (Groq/Google) route tasks to the right tool.
+- 🧠 **Conversational Agent** — LangChain + LLMs (Llama/Gemini) route tasks to the right tool.
+- ♻️ **One‑click Reset** — Clears `.tmp/.gen` and **rebuilds file uploader** via dynamic keys for a fresh UI.
 
 ## 🛠️ Tech Stack
 **Streamlit** · **LangChain** · **Groq/Google LLMs** · **YOLO** · **BLIP** · **EasyOCR** · **Stable Diffusion** · **Python 3.10+**
@@ -35,28 +56,26 @@
 
 ## 📥 Installation
 ```bash
-# Clone
-git clone https://github.com/YOUR_USERNAME/Pixel_Dialogue.git
+# 1) Clone
+git clone https://github.com/OnkarUpadhyay/PIXEL-DIALOGUE.git
 cd Pixel_Dialogue
 
-# (Recommended) Virtual env
+# 2) Virtual environment
 python -m venv .venv
-# Windows PowerShell
+# Windows
 .venv\Scripts\Activate.ps1
 # macOS/Linux
 # source .venv/bin/activate
 
-# Install deps
+# 3) Install
 pip install -r requirements.txt
 
-# Environment
-copy .env.example .env  # create and fill with your keys
-# Or create .env manually:
+# 4) Environment (create .env)
 # GROQ_API_KEY=...
 # GOOGLE_API_KEY=...
 # TAVILY_API_KEY=...
 
-# Run
+# 5) Run
 streamlit run main.py
 ```
 
@@ -64,68 +83,35 @@ streamlit run main.py
 
 ---
 
-## 🎬 Create a real demo GIF (replace the placeholder)
-
-You have two easy options. After recording, **save the final GIF as** `assets/demo.gif`.
-
-### Option A — OBS Studio (recommended)
-1. Install [OBS Studio](https://obsproject.com/)
-2. Record a short 10–20s clip interacting with the app
-3. Export to MP4/WebM
-4. Convert to GIF with **ffmpeg**:
-   ```bash
-   ffmpeg -i input.mp4 -vf "fps=10,scale=900:-1:flags=lanczos" -loop 0 assets/demo.gif
-   ```
-
-### Option B — Direct ffmpeg screen capture (Windows PowerShell)
-```powershell
-# Record a region (adjust size/offset) to output.mp4
-ffmpeg -f gdigrab -framerate 30 -offset_x 100 -offset_y 100 -video_size 1280x720 -i desktop output.mp4
-
-# Convert to GIF
-ffmpeg -i output.mp4 -vf "fps=10,scale=900:-1:flags=lanczos" -loop 0 assets/demo.gif
-```
-
----
 
 ## 🧭 Architecture
 <p align="center">
-  <img src="assets/architecture.svg" alt="Pixel Dialogue architecture diagram" width="100%">
+  <img src="assets/architecture.png" alt="Pixel Dialogue architecture diagram" width="100%">
 </p>
 
-**Flow:** Browser → Streamlit (UI + Agent) → LangChain → Tools (BLIP / YOLO / EasyOCR / SD) → Workspaces (`.tmp`, `.gen`) → Response.
+**Flow:** Browser → Streamlit (UI + Agent) → LangChain (Groq/Gemini) → Tools (BLIP/YOLO/EasyOCR/SD) → Workspaces (`.tmp`, `.gen`) → Answer.
 
 ---
 
 ## 📁 Project Structure
 ```
 Pixel_Dialogue/
-├─ main.py               # Streamlit UI + Agent orchestration
+├─ main.py               # Streamlit UI + agent orchestration
 ├─ tools.py              # Tools: caption, detect, OCR, generate, search
-├─ assets/
-│  ├─ pixel-dialogue-logo.svg
-│  ├─ pixel-dialogue-banner.svg
-│  ├─ architecture.svg
-│  └─ demo.gif           # placeholder – replace with your real capture
+├─ assets                # UI images (logo, banner, icons)
 ├─ .tmp/                 # ephemeral uploads (gitignored)
 ├─ .gen/                 # generated images (gitignored)
 ├─ requirements.txt
 ├─ .gitignore
-├─ .env.example          # template with keys
 └─ README.md
 ```
 
 ---
 
 ## 🙌 Contributing
-PRs are welcome! Ideas: improve UI, add new tools/models, add GPU tips, optimize SD pipeline, or write tests.
-
-## 📜 License
-MIT — see [LICENSE](LICENSE).
-
----
+PRs are welcome: new tools, UI polish, GPU tips, or CI workflows.
 
 <p align="center">
-  <img src="assets/pixel-dialogue-logo.svg" alt="Pixel Dialogue logo" width="56%" />
+  <img src="assets/pixel-dialogue-logo.png" alt="Pixel Dialogue logo" width="52%" />
 </p>
 
