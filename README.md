@@ -5,8 +5,8 @@
 
 <h1 align="center">
   <img
-    src="https://readme-typing-svg.herokuapp.com?size=26&duration=2500&pause=700&color=FF3AA3&center=true&vCenter=true&width=600&lines=🌟+Pixel+Dialogur;Hello+traveler!;You’ve+entered+the+world+of+Pixel+Dialogur;A+chatbot+that+blends+agentic+intelligence;With+pixel‑perfect+charm;✨+Explore+the+code;✨+Share+your+thoughts;✨+Help+shape+the+dialogue"
-    alt="Animated Pixel Dialogur welcome"
+    src="https://readme-typing-svg.herokuapp.com?size=26&duration=2500&pause=700&color=FF3AA3&center=true&vCenter=true&width=600&lines=🌟+Pixel+Dialogue;Hello+traveler!;You’ve+entered+the+world+of+Pixel+Dialogue;A+chatbot+that+blends+agentic+intelligence;With+pixel‑perfect+charm;✨+Explore+the+code;✨+Share+your+thoughts;✨+Help+shape+the+dialogue"
+    alt="Animated Pixel Dialogue welcome"
   />
 </h1>
 
